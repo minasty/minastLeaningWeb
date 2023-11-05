@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Minast learning platform</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #9ACD32;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ADFF2F;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #FFFF00;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: blue;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+<script src="confetti.js"></script>
+</head>
+<body>
+<button type="button" onclick="start()">Start animation</button><button type="button" onclick="stop()">Stop animation</button>
+<script>
+
+        // start
+
+        const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 1000); // 1000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        start();
+        stop();
+    </script>
+
+
+<header>
+  <h2>WELCOME TO MINAST LEARNING WEB</h2>
+ 
+ 
+</header>
+
+<section>
+  <nav>
+    <ul>
+	<h4>ELECTRONIC SERVICES DEPERTMENT</h4>
+      <li><a href="https://forms.gle/vT1vVuEx6FuTi6i16">ELSCH quiz1</a></li>
+      
+    </ul>
+	
+  </nav>
+  
+  
+  <article style="background-image: url('muhanga.jpg'); opacity: 0.3;">
+    <h1>You can learn more from this web by doing quizes and assessments </h1>
+    
+  </article>
+</section>
+
+<footer>
+  
+   <marquee behavior="scroll" direction="left"><p style="color:red"><font size="-1">This web platform was designed and developed by Minast from St Laurent GASEKE TVET School</marquee></p>
+</footer>
+
+
+
+</body>
+</html>
+
